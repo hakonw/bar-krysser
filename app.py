@@ -7,9 +7,9 @@ template = env.get_template("regning.html")
 
 st.title("Barsystem")
 
-gjeng = st.selectbox("Gjeng", ["VK", "REGI"])
+gjeng = st.text_input("Gjeng", "VK")
 dato = st.date_input("Dato")
-csv_data = st.text_area("Kryssing (CSV format)", "person,44\nanother_person,55")
+csv_data = st.text_area("Kryssing (CSV format)", "person,44\nanother_person,55", height=300)
 
 # TODO kanskje endre det litt
 try:
