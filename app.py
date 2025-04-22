@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 from jinja2 import Environment, FileSystemLoader
 import streamlit.components.v1 as components
 
@@ -9,7 +8,7 @@ template = env.get_template("regning.html")
 st.title("Barsystem")
 
 gjeng = st.selectbox("Gjeng", ["VK", "REGI"])
-dato = st.date_input("Dato", pd.Timestamp.now())
+dato = st.date_input("Dato")
 csv_data = st.text_area("Kryssing (CSV format)", "person,44\nanother_person,55")
 
 # TODO kanskje endre det litt
